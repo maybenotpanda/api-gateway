@@ -10,6 +10,7 @@ const coursesRouter = require("./routes/courses");
 const chaptersRouter = require("./routes/chapters")
 const lessonsRouter = require("./routes/lessons")
 const imageCoursesRouter = require("./routes/imageCourses")
+const myCoursesRouter = require("./routes/myCourses")
 const mediaRouter = require("./routes/media");
 const ordersRouter = require("./routes/orders");
 const paymentsRouter = require("./routes/payments");
@@ -32,6 +33,7 @@ app.use("/courses", coursesRouter);
 app.use("/chapters", verifyToken, chaptersRouter)
 app.use("/lessons", verifyToken, lessonsRouter)
 app.use("/image-courses", verifyToken, imageCoursesRouter)
+app.use("/my-courses", verifyToken, myCoursesRouter)
 app.use("/media", mediaRouter);
 app.use("/orders", ordersRouter);
 app.use("/payments", paymentsRouter);
